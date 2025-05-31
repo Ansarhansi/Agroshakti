@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Crop Prediction Model</title>
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Hind:300" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <div class="login">
+    <h1>AgroShakti</h1>
+
+    <!-- Form with only temperature, humidity, pH, and rainfall -->
+    <form action="{{ url_for('predict') }}" method="post">
+      <input type="text" name="temperature" placeholder="Temperature" required="required" />
+      <input type="text" name="humidity" placeholder="Humidity" required="required" />
+      <input type="text" name="pH" placeholder="pH" required="required" />
+      <input type="text" name="rainfall" placeholder="Rainfall" required="required" />
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+      <a href="https://thingspeak.mathworks.com/channels/2909082/private_show">
+        <button type="button" class="btn btn-primary btn-block btn-large">Monitor</button>
+      </a>
+    </form>
+
+    <br><br>
+
+    <h1 id="predi">
+      {{ prediction_text }}
+    </h1>
+  </div>
+</body>
+</html>

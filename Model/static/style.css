@@ -1,0 +1,103 @@
+/* Reset default margins and ensure full viewport coverage */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Use the updated smart farming image without humans */
+    background-image: url("farm.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Container for centering and spacing content */
+.container {
+    margin: 100px 150px 100px 150px;
+    text-align: center;
+    color: #FFD700; /* Bright yellow for good visibility */
+    background: rgba(0, 100, 0, 0.6); /* Semi-transparent green overlay for contrast */
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 1200px; /* Limits container width for better control */
+}
+
+/* Headline styling to match the image */
+h1 {
+    font-size: 3rem; /* Larger font to match the image prominence */
+    margin-bottom: 20px;
+    font-weight: bold; /* Bold to mimic the image text */
+    letter-spacing: 2px; /* Slight spacing for a modern look */
+}
+
+/* Subheadline paragraph */
+p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Input field styling */
+input {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 4px solid #4CAF50;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    border-radius: 5px 5px 0 0;
+    color: #333; /* Dark text inside input for contrast */
+}
+
+/* Button styling */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 100px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Prediction text styling */
+#predi {
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        margin: 50px 20px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    input, button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    button {
+        padding: 10px 50px;
+    }
+}
